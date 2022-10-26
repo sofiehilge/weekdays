@@ -1,0 +1,174 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(assets/ny-baggrund.jpg);
+    height: 4000px; 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+   
+
+}
+.container{
+    max-width: 500px;
+    margin: 10px auto;
+    padding: 20px;
+    background-color: rgba(211,211,211, 0.5);
+}
+
+h1{
+    font-family: sans-serif;
+    font-size: 60px;
+}
+
+h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+}
+
+#add-new-form{
+    display:none;
+}
+
+#add-new-form *{
+    display: block;
+    padding: 10px;
+    margin: 5px 0;
+    width: 100%;
+    background-color: rgba(255, 69, 0, 0.4);
+}
+
+/* input felter */
+input[type=text] {
+    border: 3px solid black;
+    border-radius: 8px;
+    font-size: 20px;
+    font-size: 15px;
+}
+
+input[type=submit] {
+    border: 3px solid black;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+input[type=date]{
+    border: 3px solid black;
+    border-radius: 8px;
+}
+
+/* placeholder baggrund */
+
+
+button {
+    padding: 10px;
+    border: 3px solid black;
+    border-radius: 8px;
+    font-size: 20px;
+}
+
+#delete-btn{
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+
+#add-new-form.editing-active{
+    display: block;
+}
+
+li{
+    list-style: none;
+}
+
+#tasks{
+    display: block;
+    display: inline;
+    font-size: 15px;
+}
+.done{
+    background-color: goldenrod;
+    opacity: 0.7;
+}
+
+/* custom checkbox */
+
+.check {
+    display: block;
+    position: relative;
+    left: 10px;
+    top: 5px;
+    margin-bottom: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* hide the browser's default checkbox */
+.check input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* create a customcheckbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 27px;
+    width: 27px;
+    background-color: goldenrod;
+    border: 3px solid black;
+    border-radius: 8px;
+}
+/* when the checkbox is checked, add a orange background */
+.check input:checked ~ .checkmark {
+    background-color: orangered;
+}
+
+/* create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* show the checkmark when checked */
+.check input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* style the checkmark/indicator */
+.check .checkmark:after {
+    left: 1px;
+    top: 1px;
+    width: 20px;
+    height: 20px;
+    background-image: url(assets/check-solid.png);
+    background-size: 20px;
+    background-repeat: none;
+}
+
+/* side by side with the delete btn */
+
+.check, #delete-btn {
+    display: inline;
+}

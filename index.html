@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="manifest" href="assets/manifest.json">
+    <title>Kalender</title>
+
+    <script>
+        if ("serviceWorker in navigator") {
+            window.addEventListener("load", function () {
+                navigator.serviceWorker.register("service-worker.js")
+            })
+        }
+    </script>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Kalender</h1>
+        <div class="weekdays">
+            <h2 class="mandag">Mandag</h2>
+            <button id="add-new-btn-ma">Opret event</button>
+            <ul id="tasks-ma">
+                <!-- li er rykket ind i javascrips, fordi på den måde skal bruger selv skrive i listen -->
+            </ul>
+            <h2 class="tirsdag">Tirsdag</h2>
+            <button id="add-new-btn-ti">Opret event</button>
+            <ul id="tasks-ti">
+                <!-- li er rykket ind i javascrips, fordi på den måde skal bruger selv skrive i listen -->
+            </ul>
+            <h2 class="onsdag">Onsdag</h2>
+            <button id="add-new-btn-on">Opret event</button>
+            <ul id="tasks-on">
+                <!-- li er rykket ind i javascrips, fordi på den måde skal bruger selv skrive i listen -->
+            </ul>
+            <h2 class="torsdag">Torsdag</h2>
+            <button id="add-new-btn-to">Opret event</button>
+            <ul id="tasks-to">
+                <!-- li er rykket ind i javascrips, fordi på den måde skal bruger selv skrive i listen -->
+            </ul>
+            <h2 class="fredag">Fredag</h2>
+            <button id="add-new-btn-fr">Opret event</button>
+            <ul id="tasks-fr">
+                <!-- li er rykket ind i javascrips, fordi på den måde skal bruger selv skrive i listen -->
+            </ul>
+            <h2 class="lørdag">Lørdag</h2>
+            <button id="add-new-btn-lo">Opret event</button>
+            <ul id="tasks-lo">
+                <!-- li er rykket ind i javascrips, fordi på den måde skal bruger selv skrive i listen -->
+            </ul>
+            <h2 class="søndag">Søndag</h2>
+            <button id="add-new-btn-so">Opret event</button>
+            <ul id="tasks-so">
+                <!-- li er rykket ind i javascrips, fordi på den måde skal bruger selv skrive i listen -->
+            </ul>
+            <form action="" id="add-new-form">
+                <input type="text" name="" id="new-title" placeholder="Begivenhed" required
+                    pattern="[æÆøØåÅ a-åA-Å0-9]+"><!-- det gør at man kun kan skrive disse tegn -->
+                <label for="appt">Vælg et tidspunkt:</label>
+                <input type="time" name="appt" id="appt" placeholder="Tidspunkt" pattern="[0-9]+">
+                <input type="submit" value="OK">
+            </form>
+            <hr><!-- horisontal row -->
+            
+        </div>
+
+    </div>
+    <script src="script.js" defer></script>
+</body>
+
+</html>
